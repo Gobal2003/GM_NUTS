@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart-container{
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cart-container img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.total{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 30px;
+}

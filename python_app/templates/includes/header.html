@@ -1,0 +1,58 @@
+
+<div class="navbar"> 
+            
+            <p class="my_title">GM NUTS
+            </p>
+
+            
+                <a href="{% url 'home' %}">Home
+                <i class="fa-regular fa-house"></i>
+                </a>
+
+               <a href="{% url 'about' %}">About
+                <i class="fa-solid fa-circle-info"></i>
+                </a>
+                
+            
+
+                <a href="{% url 'products' %}">Products
+                <i class="fa-brands fa-product-hunt"></i>   
+                </a>
+            
+
+            
+                <a href="{% url 'contact' %}">Contact
+                <i class="fa-solid fa-address-book"></i>
+                </a>
+
+                {% comment %} <a href="{% url 'login' %}">Login
+                {% comment %} <i class="fa-solid fa-right-to-bracket"></i>
+                </a> {% endcomment %} 
+
+                {% if request.user.is_authenticated %}
+                <form action= "{% url 'logout' %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit">Logout
+                    </button>
+                </form>
+                {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                    <a href = "{% url 'register' %}">Register</a>
+                    <a href = "{% url 'forgot_password' %}">Forgot Password</a>
+                {% endif %}
+                
+
+
+
+
+            <div class="cart-header">
+                <a href="#" onclick="showCart()">🛒 Cart (<span id="cart-count">0</span>)</a>
+            </div>
+
+            <div id="cart-section" style="display:none;">
+                <h2>Your Cart 🛒</h2>
+                <ul id="cart-list"></ul>
+                <p id="cart-total">Total: Rs.0</p>
+            </div>
+</div>
+

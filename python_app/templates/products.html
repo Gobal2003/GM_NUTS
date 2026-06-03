@@ -1,0 +1,115 @@
+{% extends 'master.html'%}
+{% load static %}
+{% block content %}
+
+
+{% for product in products %}
+
+<div class="product_container">
+
+<h4>{{product.name}}</h4>
+<p>{{product.price}}</p>    
+{% comment %} <img src="{{product.image.url}}" width="200px" alt="Image" width="200px" height="200px"> {% endcomment %}
+{% if product.image %}
+    <img src = "{{product.image.url}}" width="200px">
+{% else %}
+    <img src = "{% static 'images/default_image.jpg' %}" width="200px">
+{% endif %}
+<h4>{{product.description}}</h4>
+
+<a href = "{% url 'add_to_cart' product.id %}">
+    <button>Add to cart</button>
+</a>
+
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+
+
+
+{% comment %} <h1 class="products-title" id="products">Products</h1>
+
+
+         <div class="row"> 
+            
+            <div class="card"> 
+                <img class="image_1" src="" alt="Almond">
+                <p class="fw-normal">Almond</p> 
+                <p class="price">1kg price : Rs.800/-</p>
+                <p style="text-decoration: none;" class="btn btn-secondary"></p>
+                <button class="btn" onclick="addToCart('Almond',800,'https:/images.pexels.com/photos/5908477/pexels-photo-5908477.jpeg')">Add to Cart</button>   
+            </div>
+            
+
+            <div class="card"> 
+                <img class="image_1" src="https://images.pexels.com/photos/36631827/pexels-photo-36631827.jpeg" alt="Cashew">
+                <p class="fw-normal">Cashew</p>
+                <p class="price">1kg price : Rs.870/-</p> 
+                <p style="text-decoration: none;" class="btn btn-secondary" href="#details"></p>
+                <button class="btn" onclick="addToCart('Cashew', 870,'https:/images.pexels.com/photos/36631827/pexels-photo-36631827.jpeg')">Add to Cart</button>
+            </div>
+
+
+            <div class="card"> 
+                <img class="image_1" src="https://images.pexels.com/photos/6658135/pexels-photo-6658135.jpeg" alt="Walnut">
+                <p class="fw-normal">Walnut</p> 
+                <p class="price">1kg price : Rs.920</p>
+                <p style="text-decoration: none;" class="btn btn-secondary" href="#details"></p>
+                <button class="btn" onclick="addToCart('Walnut', 920,'https:/images.pexels.com/photos/6658135/pexels-photo-6658135.jpeg')">Add to Cart</button>
+            </div>
+
+
+            <div class="card"> 
+                <img class="image_1" src="https://images.pexels.com/photos/32268320/pexels-photo-32268320.jpeg" alt="Pistachios">
+                <p class="fw-normal">Pistachios</p> 
+                <p class="price">1kg price : Rs.1400/-</p>
+                <p style="text-decoration: none;" class="btn btn-secondary" href="#details"></p>
+                <button class="btn" onclick="addToCart('Pistachios',1400,'https:/images.pexels.com/photos/32268320/pexels-photo-32268320.jpeg')">Add to Cart</button>
+            </div>
+        </div>
+
+
+        <div class="row"> 
+
+            <div class="card"> 
+                <img class="image_1" src="https://images.pexels.com/photos/7132722/pexels-photo-7132722.png" alt="Brazil Nuts">
+                <p class="fw-normal">Brazil Nuts</p> 
+                <p class="price">1kg price : Rs.3300/-</p>
+                <p style="text-decoration: none;" class="btn btn-secondary" href="#details"></p>
+                <button class="btn" onclick="addToCart('Brazil Nuts', 3300,'https:/images.pexels.com/photos/7132722/pexels-photo-7132722.png')">Add to Cart</button>
+            </div>
+
+            
+            <div class="card"> 
+                <img class="image_1" src="https://images.pexels.com/photos/34530033/pexels-photo-34530033.jpeg" alt="Chestnut">
+                <p class="fw-normal">Chestnut</p> 
+                <p class="price">1kg price : Rs.700/-</p>
+                <p style="text-decoration: none;" class="btn btn-secondary" href="#details"></p>
+                <button class="btn" onclick="addToCart('Chestnut', 700,'https:/images.pexels.com/photos/34530033/pexels-photo-34530033.jpeg')">Add to Cart</button>
+            </div>
+
+
+            <div class="card"> 
+                <img class="image_1" src="https://images.pexels.com/photos/7717496/pexels-photo-7717496.jpeg" alt="Hazel Nut">
+                <p class="fw-normal">Hazel Nut</p>
+                <p class="price">1kg price : Rs.2250/-</p> 
+                <p style="text-decoration: none;" class="btn btn-secondary" href="#details"></p>
+                <button class="btn" onclick="addToCart('Hazel Nut', 2250,'https:/images.pexels.com/photos/7717496/pexels-photo-7717496.jpeg')">Add to Cart</button>
+            </div>
+
+
+            <div class="card"> 
+                <img class="image_1" src="https://images.pexels.com/photos/35237494/pexels-photo-35237494.jpeg" alt="Peanut">
+                <p class="fw-normal">Peanut</p> 
+                <p class="price">1kg price : Rs.130</p>
+                <p style="text-decoration: none;" class="btn btn-secondary" href="#details"></p>
+                <button class="btn" onclick="addToCart('Peanut', 130,'https:/images.pexels.com/photos/36631827/pexels-photo-36631827.jpeg')">Add to Cart</button>
+            </div>
+        </div> {% endcomment %}
+
+
+
+
