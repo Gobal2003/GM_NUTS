@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product_container{
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.product_container img{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    /* object-fit: cover; */
+    border: 1px solid black;
+}
+
+.product_container button{
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.product_container button:hover{
+    background-color: green;
+}
