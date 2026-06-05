@@ -4,7 +4,6 @@ from .models import Product, Cart
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-
 # def home(request):
 #     return HttpResponse("Hello, World!")
 
@@ -16,8 +15,11 @@ def about(request):
     return render(request, 'about.html')   
 
 def products(request):
-    data = Product.objects.all()
-    return render(request, 'products.html', {'products' : data})
+    return HttpResponse("Products page working")
+
+# def products(request):
+#     data = Product.objects.all()
+#     return render(request, 'products.html', {'products' : data})
 
 def contact(request):
     return render(request, 'contact.html')
