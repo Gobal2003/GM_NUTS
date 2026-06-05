@@ -2,14 +2,15 @@
 {% load static %}
 {% block content %}
 
+<h1> product page is working</h1>
 
-{% for product in products %}
+
+{% comment %} {% for product in products %}
 
 <div class="product_container">
 
 <h4>{{product.name}}</h4>
 <p>{{product.price}}</p>    
-{% comment %} <img src="{{product.image.url}}" width="200px" alt="Image" width="200px" height="200px"> {% endcomment %}
 {% if product.image %}
     <img src = "{{product.image.url}}" width="200px">
 {% else %}
@@ -23,7 +24,7 @@
 
 </div>
 
-{% endfor %}
+{% endfor %} {% endcomment %}
 
 {% endblock %}
 
