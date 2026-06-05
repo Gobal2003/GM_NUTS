@@ -16,7 +16,7 @@ def about(request):
 
 def products(request):
     data = Product.objects.all()
-    return render(request, 'products.html', {'products': data})
+    return render(request, 'products.html', {'products' : data})
 
 def contact(request):
     return render(request, 'contact.html')
